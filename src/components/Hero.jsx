@@ -3,13 +3,16 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[95vh] w-full overflow-hidden">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+    <section id="home" className="relative min-h-[90vh] w-full overflow-hidden">
+      {/* 3D background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 opacity-60 sm:opacity-80">
+          <Spline scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        </div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="pt-40 pb-24 grid lg:grid-cols-12 gap-10">
+        <div className="pt-36 sm:pt-40 pb-20 grid lg:grid-cols-12 gap-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -21,14 +24,14 @@ export default function Hero() {
               Open to internships & freelance
             </div>
 
-            <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white">
+            <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white">
               Futuristic experiences by
               <span className="block bg-gradient-to-br from-fuchsia-400 via-violet-300 to-cyan-300 bg-clip-text text-transparent">
                 Hemen Bhasin
               </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg text-white/70">
+            <p className="mt-6 max-w-2xl text-base sm:text-lg text-white/70">
               I design and build fast, elegant, and intelligent interfaces. A blend of creative direction and robust engineering.
             </p>
 
@@ -53,14 +56,10 @@ export default function Hero() {
                   <dd className="mt-1"><a className="hover:text-white" href="mailto:hemenbhasin@gmail.com">hemenbhasin@gmail.com</a></dd>
                 </div>
                 <div>
-                  <dt className="text-xs uppercase tracking-widest text-white/50">Phone</dt>
-                  <dd className="mt-1"><a className="hover:text-white" href="tel:+917710597386">+91 77105 97386</a></dd>
-                </div>
-                <div>
                   <dt className="text-xs uppercase tracking-widest text-white/50">Location</dt>
-                  <dd className="mt-1">Bhopal, MP</dd>
+                  <dd className="mt-1">Patiala, Punjab</dd>
                 </div>
-                <div>
+                <div className="col-span-2">
                   <dt className="text-xs uppercase tracking-widest text-white/50">Profiles</dt>
                   <dd className="mt-1 flex gap-3">
                     <a className="hover:text-white underline" href="https://www.linkedin.com/in/hemen-bhasin/" target="_blank">LinkedIn</a>
